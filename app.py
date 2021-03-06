@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 playstore = pd.read_csv("data/googleplaystore.csv")
 
-playstore.drop_duplicates(subset=['App'], keep='first')
+playstore.drop_duplicates(subset=['App'], keep='first',inplace=True)
 
 # bagian ini untuk menghapus row 10472 karena nilai data tersebut tidak tersimpan pada kolom yang benar
 playstore.drop([10472], inplace=True)
